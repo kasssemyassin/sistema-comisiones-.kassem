@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Comisiones Premium</title>
+    <title>Sistema de Comisiones</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<!-- SISTEMA -->
-<div id="app" style="display:none;">
+
+<div id="app">
 
     <header>
         <h1>Sistema de Comisiones</h1>
-        <button onclick="toggleDark()">🌙 Modo</button>
-        <button onclick="exportar()">🧾 Exportar</button>
     </header>
 
     <section>
@@ -38,13 +36,13 @@
         <input type="number" id="gananciaVenta" placeholder="Ganancia celular">
         <input type="number" id="cantidadVenta" placeholder="Cantidad accesorios">
 
-        <button onclick="registrarVenta()">Registrar</button>
+        <button onclick="registrarVenta()">Registrar Venta</button>
     </section>
 
     <section>
         <h2>Comisiones</h2>
 
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>Funcionario</th>
@@ -54,12 +52,7 @@
             <tbody id="tablaResumen"></tbody>
         </table>
 
-        <h3>Total: <span id="total"></span></h3>
-    </section>
-
-    <section>
-        <h2>Gráfico</h2>
-        <canvas id="grafico" width="400" height="200"></canvas>
+        <h3>Total: <span id="totalComisiones"></span></h3>
     </section>
 
 </div>
