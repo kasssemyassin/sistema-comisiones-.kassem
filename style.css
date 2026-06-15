@@ -1,42 +1,40 @@
 body {
-    font-family: Arial;
-    margin: 0;
+    font-family: Arial, sans-serif;
     background: #f2f2f2;
-    transition: 0.3s;
+    margin: 0;
+    padding: 20px;
 }
 
-header {
-    background: #007bff;
-    color: white;
-    padding: 10px;
+h1 {
     text-align: center;
 }
 
-button {
-    margin: 5px;
-    padding: 8px;
-    cursor: pointer;
-}
-
-section {
+#app {
+    max-width: 900px;
+    margin: auto;
     background: white;
-    margin: 10px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
 }
 
-.login {
-    max-width: 300px;
-    margin: 100px auto;
-    text-align: center;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px gray;
+section {
+    margin-bottom: 20px;
 }
 
-input, select {
+input, select, button {
     padding: 8px;
     margin: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
 }
 
 table {
@@ -44,18 +42,7 @@ table {
     border-collapse: collapse;
 }
 
-td, th {
-    border: 1px solid #ccc;
-    padding: 8px;
-}
-
-/* DARK MODE */
-.dark {
-    background: #111;
-    color: white;
-}
-
-.dark section {
-    background: #222;
-    color: white;
+th, td {
+    padding: 10px;
+    text-align: center;
 }
