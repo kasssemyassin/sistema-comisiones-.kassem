@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Comisiones Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox" class="login">
+    <h2>Acceso al Sistema</h2>
+    <input type="text" id="user" placeholder="Usuario">
+    <input type="password" id="pass" placeholder="Contraseña">
+    <button onclick="login()">Entrar</button>
+</div>
+
+<!-- SISTEMA -->
+<div id="app" style="display:none;">
+
+    <header>
+        <h1>Sistema de Comisiones</h1>
+        <button onclick="toggleDark()">🌙 Modo</button>
+        <button onclick="exportar()">🧾 Exportar</button>
+    </header>
+
+    <section>
+        <h2>Funcionarios</h2>
+        <input type="text" id="nombreFuncionario" placeholder="Nombre">
+        <button onclick="agregarFuncionario()">Agregar</button>
+
+        <ul id="listaFuncionarios"></ul>
+    </section>
+
+    <section>
+        <h2>Venta</h2>
+
+        <select id="funcionarioVenta"></select>
+
+        <select id="tipoVenta">
+            <option value="celular">Celular</option>
+            <option value="accesorio">Accesorio</option>
+        </select>
+
+        <input type="number" id="gananciaVenta" placeholder="Ganancia celular">
+        <input type="number" id="cantidadVenta" placeholder="Cantidad accesorios">
+
+        <button onclick="registrarVenta()">Registrar</button>
+    </section>
+
+    <section>
+        <h2>Comisiones</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Funcionario</th>
+                    <th>Comisión</th>
+                </tr>
+            </thead>
+            <tbody id="tablaResumen"></tbody>
+        </table>
+
+        <h3>Total: <span id="total"></span></h3>
+    </section>
+
+    <section>
+        <h2>Gráfico</h2>
+        <canvas id="grafico" width="400" height="200"></canvas>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
