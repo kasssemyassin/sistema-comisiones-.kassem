@@ -1,19 +1,5 @@
 let funcionarios = JSON.parse(localStorage.getItem("funcionarios")) || [];
 let comisiones = JSON.parse(localStorage.getItem("comisiones")) || {};
-
-// LOGIN
-function login() {
-    let u = document.getElementById("user").value;
-    let p = document.getElementById("pass").value;
-
-    if (u === "admin" && p === "1234") {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("app").style.display = "block";
-    } else {
-        alert("Incorrecto");
-    }
-}
-
 // GUARDAR
 function guardar() {
     localStorage.setItem("funcionarios", JSON.stringify(funcionarios));
